@@ -1,0 +1,214 @@
+.container[id="firstInHome"]{
+  *{direction: rtl;}
+  height:450px;
+  .row{
+    height:100%;
+    div{
+      height:100%;
+      .carousel-item{
+        background-size:cover;object-fit:cover;border-radius:0px 10px 10px 0px;
+        overflow:hidden;
+        >div{
+          background-color:rgba(000, 000, 000, 0.4);border-radius:0px 10px 10px 0px;
+          position:relative !important;
+          div{
+            position:absolute;bottom:-200px !important;
+            button{
+              padding:0.5rem 2rem;background:#9D1D96;color:#fff;border:none;
+              position: relative;font-size:18px;margin-top:10px;
+              i{position:absolute;left:10px;top:35%}
+            }
+          }
+        }
+      }
+      .carousel-item:first-of-type{ background-image:url('../../assets/home/1.webp'); }
+      .carousel-item:nth-of-type(2){ background-image:url('../../assets/home/2.webp'); }
+      .carousel-item:nth-of-type(3){ background-image:url('../../assets/home/3.webp'); }
+      .carousel-item:nth-of-type(4){ background-image:url('../../assets/home/4.webp'); }
+      .carousel-item:nth-of-type(5){ background-image:url('../../assets/home/5.webp'); }
+      .carousel-item:nth-of-type(6){ background-image:url('../../assets/home/6.webp'); }
+      .carousel-item:nth-of-type(7){ background-image:url('../../assets/home/7.webp'); }
+    }
+    div:nth-child(2){
+      overflow-y: scroll;
+      section:not(:first-of-type){margin-top:5px;}
+      section{
+        div{
+          background-color:rgba(000, 000, 000, 0.4);
+          justify-content:center;align-items:center;text-align:center !important;
+          display:flex;flex-direction:column;color:#fff;
+          b{font-size:14px;text-align:center}
+        }
+      }
+
+    }
+    .large-2::-webkit-scrollbar-track {
+      border-radius: 10px;
+      padding: 2px 0;
+      background-color: #e3840f;
+    }
+    .large-2::-webkit-scrollbar {
+      width: 10px;
+    }
+    .large-2::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #9d1d96;
+    }
+    .aside-imgs{
+      height:30%;background-size:cover;width:100%;
+    }
+    #img-1{background-image:url('../../assets/home/1.webp');}
+    #img-2{background-image:url('../../assets/home/2.webp');}
+    #img-3{background-image:url('../../assets/home/3.webp');}
+    #img-4{background-image:url('../../assets/home/4.webp');}
+    #img-5{background-image:url('../../assets/home/5.webp');}
+    #img-6{background-image:url('../../assets/home/6.webp');}
+    #img-7{background-image:url('../../assets/home/7.webp');}
+  }
+}
+
+.owl-next{
+  color: #FFF;
+  position: absolute !important;
+  top: 50% !important;
+  left: -30px !important;
+}
+.container-fluid:nth-of-type(2){
+  .container{
+    .row:first-child{
+      .slide{
+        border-radius:5px !important;box-shadow: 3px 3px 3px 3px rgb(161, 161, 161);
+        div:first-child{
+          border-radius:5px !important;
+          img{height:250px;}
+        }
+        div:nth-child(2){
+          p:first-of-type{
+            padding:10px 15px 0px 15px;font-size:1.25rem;margin-bottom:0px;
+            height:60px;
+          }
+          p:nth-of-type(2){
+            padding:5px 15px;font-size:18px;margin-top:10px;text-overflow:ellipsis;
+            -webkit-line-clamp:2;overflow:hidden;-webkit-box-orient:vertical;display:-webkit-box;
+
+          }
+        }
+        .btn{
+          width:100%;background:#9d1d96;color:#fff;border-radius:0rem 0rem 0.25rem 0.25rem;
+          text-align:center!important;font-size:18px;font-weight:bold;}
+      }
+    }
+    .row:nth-child(2){
+      div{
+        .btn{background:#9D1D96;color:#fff;box-shadow:none;}
+        .btn:hover{background:#fff;border:1px solid #9D1D96;color:#9D1D96;}
+      }
+    }
+  }
+  overflow-x: hidden;
+}
+
+.container[id='md-mdwanetSafar']{
+  .row{
+    div.col-md-4{
+      div{
+        .row{
+          .col-4{border-radius:10px !important;}
+          .col-8{
+            justify-content:center;align-items:center;padding: auto;margin:auto;
+            >div:first-child{
+              a{color:#9D1D96;}
+              border-bottom:2px solid #9D1D96;
+            }
+            div:nth-child(2){
+              div:first-of-type{
+                i{color:gray;}
+                span{margin:0px 2px 0px 0px;color:gray}
+              }
+              div:nth-of-type(2){
+                i{color:gray;}
+                span{margin:0px 5px 0px 0px;color:gray}
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+  overflow-x:hidden;
+}
+#video{
+  position: relative !important;
+  a{
+    position:absolute !important;top:40% !important;left:40% ;
+    background: rgba(0,0,0,0.5);padding:15px 20px;border-radius:50%;
+    color:#fff;
+    .bi-play-fill{font-size:20px;}
+  }
+}
+
+
+.container-fluid[id="services"]{
+  background-color:#f7f7f7;
+  .col-md-6{
+    .row{ margin: 10px 0px;
+      a{
+        justify-content:flex-end;text-decoration:none;color:#000;
+        span{margin:auto 5px;font-size:24px;}
+      }
+    }
+  }
+}
+
+#say-about-safaraq{
+  .card{
+    padding: 0px;height:250px;
+    .body{padding:0.7rem;}
+    .row{
+      div:nth-child(2){
+        p{
+          font-size: .9rem;
+          color: #9d1d96;font-weight:bold;
+        }
+        .bi-star-fill{
+          margin-left:5px;color: #fb8d04;
+        }
+      }
+    }
+    p{font-size:1.1rem !important; margin: 15px 0px 10px 0px;}
+    .btn{
+      border-top-left-radius:0px;border-top-right-radius:0px;background: #9D1D96;
+      color:#fff;outline:none;box-shadow:none;position:absolute;bottom:0px;width:100%;
+    }
+  }
+  .swiper{height:300px;}
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .swiper-pagination-bullet-active{background-color:#fb8d04 !important}
+  .popup{
+    .bi-x-circle{position:absolute;top:15px;right:10px;color:#fb8d04;font-size:22px;}
+    display:none;z-index:1000;position:absolute;top:-80% !important;
+    background: rgba(0,0,0,.8);height:100vh;
+    iframe{
+      height:100%;
+    }
+  }
+  .open-popup{
+    display:block;
+  }
+  @media screen and (max-width:400px){
+    .popup{
+     position:absolute;top:30px;
+      iframe{
+        height:200px !important;
+      }
+    }
+  }
+}
+
+

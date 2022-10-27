@@ -1,0 +1,35 @@
+#program-one{
+  margin-top:76px;padding:15px 0px;background:#fb8d04;
+  .row{
+    div{
+      .bi-house-door-fill{font-size:25px;}
+      .bi-chevron-left{font-size:20px;}
+      .bi-house-door-fill{color:#fff;}
+      .bi-chevron-left{margin: 0px 10px;color:#9d1d96;}
+      b{font-size:24px;color:#fff;}
+    }
+  }
+}
+#callusContent{display:none;}
+#program-two{
+  .row{
+    div:first-child{
+      .card{
+        h1{color: #9d1d96;font-weight:bold;}
+        span{color:#fb8d04;font-size:16px;}
+        .card{
+          button{color:#fb8d04;background:transparent;border:none;}
+          .active-btn{background:#9d1d96;color:#fff}
+        }
+        #searchForProg{
+          input[type="submit"]{
+            box-shadow:none;outline:none;background:#fb8d04;
+            color:#fff;}
+        }
+      }
+    }
+  }
+}
+.active-prog{color:#9d1d96;background: red;}
+
+

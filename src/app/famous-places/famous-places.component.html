@@ -1,0 +1,17 @@
+<div class="container" id="famousPlaceOne">
+  <div class="mt-4">
+    <h1 class="text-center">أشهر الاماكن التي لا بد لك من زيارتها</h1>
+  </div>
+  <owl-carousel-o [options]="customOptions" class="row mt-5">
+    <ng-template class="col content" carouselSlide *ngFor="let place of famousPlaces">
+      <div class="mx-1 text-center">
+        <div class="card">
+          <img [src]="place.src" width="100%" style="height:400px;">
+        </div>
+        <br>
+        <span>{{place.location}}</span>
+      </div>
+    </ng-template>
+
+  </owl-carousel-o>
+</div>

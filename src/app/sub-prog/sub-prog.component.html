@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 mt-4" *ngFor="let card of subProgDetails.cards">
+      <div class="card">
+        <img [src]="card.img" class="m-2 rounder" height="250px">
+        <b class="m-2">{{card.title}}</b>
+        <div class="m-2 row">
+          <div class="col"><img src="../../assets/persons.png" width="10%" height="30px"> {{card.numPersons}}</div>
+          <div class="col"><img src="../../assets/bed.png" width="20%" height="30px"> {{card.numDays}}</div>
+        </div>
+        <p class="m-2">{{card.description}}</p>
+        <button  #goWithUs class="btn mt-5 text-center"
+        (mouseenter)="enter(goWithUs)"
+        (mouseleave)="leave(goWithUs)">انطلق معنا</button>
+      </div>
+    </div>
+  </div>
+</div>
+

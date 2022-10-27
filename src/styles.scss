@@ -1,1 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  direction:rtl;
+  text-align:right !important;
+  // font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Tajawal', sans-serif !important;
+}
+body{
+  height: 4000px;
+  overflow-x: hidden;
+}
+
+.owl-next{
+  background: #9d1d96 !important;
+  color: #FFF;
+  position: absolute !important;
+  top: 40% !important;
+  left: -30px !important;
+}
+.owl-prev{
+  background: #9d1d96 !important;
+  color: #FFF;
+  position: absolute !important;
+  top: 40% !important;
+  right: -30px !important;
+}
+
+.mat-form-field-wrapper{
+  border:2px solid #eee !important;box-shadow: 0 0 6px rgba(0,0,0,0.29) !important;
+}
+.mat-form-field-flex{background: #fff !important;}
+.mat-form-field-wrapper {padding-bottom:0px;}
+.mat-button-wrapper .ng-star-inserted{color:#fb8d04 !important;}
+.mat-form-field-underline {
+  display: none !important;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.owl-carousel .owl-item img[width="35px"] {
+  display: inline !important;
+  width: 35px !important;
+  margin:10px 5px;
+}
+#rate .bi-star-fill{color:#fb8d04 !important;font-size:22px;margin:0px 3px;}
+
+
+#famousPlaceOne{
+  .owl-next{
+    background: #9d1d96 !important;
+    color: #FFF;
+    position: absolute !important;
+    top: 45% !important;
+    left: 0px !important;
+  }
+  .owl-prev{
+    background: #9d1d96 !important;
+    color: #FFF;
+    position: absolute !important;
+    top: 45% !important;
+    right: 0px !important;
+  }
+}
+
+
+#famousPlaceOne{
+  .owl-item:nth-child(odd){
+    margin-top:45px !important;
+  }
+}
+
+@media screen and(max-width:400px) {
+  #famousPlaceOne{
+    .owl-item:nth-child(odd){
+      margin-top:0px !important;
+    }
+  }
+}
+
+//angular material selction box
+.mat-form-field {display:block !important;}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0em !important;
+}
+.mat-form-field-infix{padding: 10px;}
+.mat-select{
+  padding: 0px 5px !important;margin: 0px!important;
+}
+.mat-form-field-infix{
+  padding: 10px 0 !important;
+  border-top: 0.0em solid transparent;background:#eee;
+}
+
+.mat-select-arrow,.mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+  color: #fb8d04;border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+  border-top: 7px solid !important;}
+.mat-form-field-wrapper {
+  box-shadow:none !important;outline: none !important;
+  border-radius:5px;
+}

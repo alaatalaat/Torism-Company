@@ -1,0 +1,41 @@
+<div class="container-fluid" id="first">
+  <div class="row mx-1 my-5">
+    <h1 id="description" class="h1">{{allDetails.description}}</h1>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img class="mb-3" src="../../assets/famousHotels/map.svg">
+          <span id="title">{{allDetails.city}}</span>
+          <a href="" target="_blank" id="map"> الموقع علي الخريطة </a>
+        </div>
+        <div class="col-sm-12 col-md-6 mt-2 mt-md-0" >
+          <span id="rate"></span>
+          <span id="rateNum"></span>
+        </div>
+        <div class="mt-4">
+          <div class="card">
+            <img id="bigImg" class="card" height="500px" [src]="allDetails.carouselImg[2]" alt="">
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6 col-md mt-2"><img class="gallery" [src]="allDetails.carouselImg[0]"></div>
+            <div class="col-sm-6 col-md mt-2"><img class="gallery" [src]="allDetails.carouselImg[1]"></div>
+            <div class="col-sm-6 col-md mt-2"><img class="gallery" [src]="allDetails.carouselImg[2]"></div>
+            <div class="col-sm-6 col-md mt-2"><img class="gallery" [src]="allDetails.carouselImg[3]"></div>
+            <div class="col-sm-6 col-md mt-2"><img class="gallery" [src]="allDetails.carouselImg[4]"></div>
+          </div>
+        </div>
+        <div class="mt-5 col-sm-12 col-md-6">
+          <h1>معلومات عن {{allDetails.description}}</h1>
+          <p>{{allDetails.infoAbout}}</p>
+        </div>
+        <div class="mt-5 col-sm-12 col-md-6">
+          <h1>المرافق</h1>
+          <ul class="row">
+            <li class="col-sm-12 col-md"  *ngIf="allDetails.wifi == true"><img src="../../assets/famousHotels/wifi.svg"/>واي فاي مجانية</li>
+            <li class="col-sm-12 col-md" *ngIf="allDetails.pool == true"><img src="../../assets/famousHotels/pool.svg"/>مسبح خاص</li>
+            <li class="col-sm-12 col-md" *ngIf="allDetails.coffe == true"><img  src="../../assets/famousHotels/coffee.svg"/>سبا ومركز صحي</li>
+            <li class="col-sm-12 col-md" *ngIf="allDetails.parking == true"><img src="../../assets/famousHotels/parking.svg"/>مواقف سيارات</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>

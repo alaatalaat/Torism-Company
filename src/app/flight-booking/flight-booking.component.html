@@ -1,0 +1,297 @@
+<div class="container-fluid" id="booking-one">
+    <div class="container">
+      <div class="row">
+        <div>
+            <a routerLink="/home"><i class="bi bi-house-door-fill"></i></a>
+            <i class="bi bi-chevron-left"></i>
+            <b>حجز طيران</b>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-5" id="booking-two">
+  <div class="row mx-md-5">
+    <div class="col-sm-12 col-md-12 mx-auto">
+      <img src="../../assets/bookingFlight/flight1.webp" class="rounded" width="100%">
+    </div>
+  </div>
+</div>
+
+<!-- Start reservation Form -->
+<div class="container-fluid  mt-5" id="booking-three">
+  <form [formGroup]="reservationForm" (ngSubmit)="submiReservationForm()">
+    <div class="row mx-md-5">
+      <div class="col-sm-4 col-md-3 col-lg-2">
+        <input type="radio" name="flight" checked>
+        <label>ذهابا وإيابا</label>
+      </div>
+      <div class="col-sm-4 col-md-3 col-lg-2">
+        <input type="radio" name="flight">
+        <label>اتجاه واحد</label>
+      </div>
+      <div class="col-sm-4 col-md-3 col-lg-2">
+        <input type="radio" name="flight">
+        <label>رحلات متعددة</label>
+      </div>
+    </div>
+
+    <div class="row mt-4 mx-md-5">
+
+      <div class="col-sm-12 col-md-4">
+        <div class="mx-1 py-3 px-2" id="inputOne">
+          <input type="text" placeholder="الاسم" formControlName="name">
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+        <div class="row mx-1 py-3 px-2" id="inputTwo">
+          <div class="col-9">
+            <input type="text" placeholder="رقم الجوال" formControlName="phone">
+          </div>
+          <div class="col-3  px-0 m-0">
+            <div class="col-3 text-center">
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+            <div class="col-5 text-center text-bold" id="code" style="font-size:18px;">20{{plus}}</div>
+            <div class="col-4">
+              <div>
+                <img id="flagImg" src="../../assets/bookingFlight/eg.png" width="30px" height="20px">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="codes mx-1 d-none">
+          <li id="sd" style="direction:ltr;text-align:left;" (click)="changeFlagToSD()">
+            <div style="float:left;margin: 0px 10px;">
+              <img id="sdImg" src="../../assets/bookingFlight/sd.png" width="30px" height="20px">
+            </div>
+            <div style="float:left;margin: 0px 5px;" id="codeOne">249{{plus}}</div>
+            <div style="float:left;margin: 0px 5px;">السودان</div>
+          </li>
+          <li style="direction:ltr;text-align:left;" (click)="changeFlagToQA()">
+            <div style="float:left;margin: 0px 10px;">
+              <img id="qaImg" src="../../assets/bookingFlight/qa.png" width="30px" height="20px">
+            </div>
+            <div style="float:left;margin: 0px 5px;" id="codeTwo">974{{plus}}</div>
+            <div style="float:left;margin: 0px 5px;">قطر</div>
+          </li>
+          <li style="direction:ltr;text-align:left;" (click)="changeFlagToTU()">
+            <div style="float:left;margin: 0px 10px;">
+              <img id="tuImg" src="../../assets/bookingFlight/tu.png" width="30px" height="20px">
+            </div>
+            <div style="float:left;margin: 0px 5px;" id="codeThree">90{{plus}}</div>
+            <div style="float:left;margin: 0px 5px;">تركيا</div>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="col-sm-6 col-md-2">
+        <div class="row mx-1 py-3" id="inputThree">
+          <i class="fa fa-user col-2 mt-1" aria-hidden="true"></i>
+          <input type="text" class="col-8" formControlName="countPassenger"
+           id="passenger" [value]="y+' طفل | '+ z +' راشد | '+s+'طالب '" placeholder="المسافرين"  readonly="readonly">
+          <i class="fa fa-caret-down col-2 px-1 mt-1" aria-hidden="true"></i>
+        </div>
+        <ul class="gender container-fluid rounded bg-white d-none">
+          <li class="row py-3">
+            <div class="col-6 py-1">
+              طفل
+            </div>
+            <div class="col-6 ">
+              <div class="row">
+                <div class="col-4 py-1 rounded text-white" (click)="decrementChild(child)">
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
+                <div class="col-4 py-1 text-center">{{child}}</div>
+                <div class="col-4 py-1 rounded text-white" (click)="incrementChild(child)">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="row py-3">
+            <div class="col-6 py-1">
+             راشد
+            </div>
+            <div class="col-6 ">
+              <div class="row">
+                <div class="col-4 py-1 rounded text-white" (click)="decrementRashed(rashed)">
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
+                <div class="col-4 py-1 text-center">{{rashed}}</div>
+                <div class="col-4 py-1 rounded text-white" (click)="incrementRashed(rashed)">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="row py-3">
+            <div class="col-6 py-1">
+             طالب
+            </div>
+            <div class="col-6 ">
+              <div class="row">
+                <div class="col-4 py-1 rounded text-white" (click)="decrementStudent(student)">
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
+                <div class="col-4 py-1 text-center">{{student}}</div>
+                <div class="col-4 py-1 rounded text-white" (click)="incrementStudent(student)">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <div class="col-sm-6 col-md-2">
+        <div class="row mx-1 px-1 py-3" id="inputFour">
+          <select id="select" formControlName="degree">
+            <option class="py-2" value="الدرجه">الدرجة</option>
+            <option value="ُEconomy Class">Economy Class</option>
+            <option value="Business Class">Business Class</option>
+            <option value="First Class">First Class</option>
+          </select>
+          <div id="arrow">
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+        <div class="row mx-1 px-1 py-3" id="inputFive" [formGroup]="formCityFrom">
+          <div class="col-1">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <input type="text" class="col-10" value="EG" id="fromCity"> <!-- formControlName="cityTo"-->
+          <div class="col-1">
+            <i class="bi bi-caret-down-fill"></i>
+          </div>
+        </div>
+        <ul class="container-fluid px-0 fromCity">
+          <li class="row py-3 px-0 mx-0" *ngFor="let c of cityfrom ;let i">
+            <div class="col-2">
+              <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 my-0 py-0" (click)="reserveFrom(c.city)">
+              <b style="float:left;" [id]="c.id">{{c.city}}</b>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="col-sm-12 col-md-4">
+        <div class="row mx-1 px-1 py-3" id="inputSix" [formGroup]="form">
+          <div class="col-1">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <input type="text" class="col-10" value="US" id="toCity"
+          formControlName="cityArr">
+          <div class="col-1">
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </div>
+        </div>
+        <ul class="container-fluid px-0 toCity">
+          <li class="row py-3 px-0 mx-0"  *ngFor="let city of  cityArrived ;let i = index ">
+            <div class="col-2">
+              <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 my-0 py-0" (click)="reserve(city)">
+              <b style="float:left;" >{{city}}</b>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <mat-form-field class="col-sm-12 col-md-4" appearance="fill" dir='rtl'>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate formControlName="startDate">
+          <input matEndDate formControlName="endDate">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+      <div class="col-sm-12 col-md-8"></div>
+      <div class="col-sm-12 col-md-4">
+        <input type="submit" (click)="updateReservationForm()" class="btn w-100 text-center px-1 py-3" value="احجز">
+      </div>
+
+    </div>
+  </form>
+
+</div>
+
+<!-- Strat reservation by sitable price -->
+<div class="container-fluid my-5" id="sitable_price">
+  <div class="row mx-md-5">
+    <div class="col-sm-12 col-md-6 col-lg-5 offset-lg-1" style="justify-content:center;display:flex;flex-direction:column">
+      <h2>حجوزات طيران بأنسب الأسعار</h2>
+      <p>فريقنا من خبراء السفر والسياحة على أُهبة الاستعداد لمساعدتكم في تحصيل الحجوزات الأنسب لرحلاتكم على مدار الساعة</p>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <img class="mx-auto" src="../../assets/bookingFlight/plane.webp" width="90%" height="100%">
+    </div>
+  </div>
+</div>
+
+<!-- Start Best Companies -->
+<div class="container-fluid my-5 pb-1" id="bestCompanies">
+  <div class="row mx-5 my-5">
+    <div>
+      <h1>أفضل شركات الطيران هم شركاؤنا</h1>
+    </div>
+
+    <owl-carousel-o [options]="Options">
+      <ng-template carouselSlide *ngFor="let img of images" >
+        <div class="mx-3">
+          <img [src]="img.src" [alt]="img.alt"/>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+
+  </div>
+</div>
+
+<!-- Why should choose Safaraq ? -->
+<div class="container mt-5" id="whyChooseSafarq">
+  <div class="text-center"><h1>لماذا يجب عليك اختيار السفر مع ترافيل!</h1></div>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-6">
+      <div class="mx-5">
+        <h1 appHighlight>ما الذي تستفيده عند حجز تذاكر الطيران عبر ترافيل السياحية؟</h1>
+        <p>تحرص ترافيل السياحية على تقديم خدماتها لعملائها وفق أعلى معايير الجودة، عبر اختيار الحجز الملائم لك بعناية، وتقديم باقات العروض المتنوعة، وبأسعار منافسة، مستفيدة من ارتباطاتها مع أبرز شركات الطيران المحلية، بالإضافة لحجوزات السفر على أهم خطوط الطيران العالمية، وذلك بالتوازي مع ما نقدمه من خدمات تنظيم الرحلات السياحية، والحجوزات الفندقية، وخدمات النقل الراقية.</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="text-center" id="round" [style]="{'background':fillColor}" (mousemove)="changeColor()">
+        <img src="../../assets/bookingFlight/whyChoose1.png" width="70%" height="100%">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5" id="youEarn">
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-6">
+      <div class="text-center" id="round" [style]="{'background':fillColor}" (mousemove)="changeColor()">
+        <img src="../../assets/bookingFlight/earn.png" width="80%" height="100%">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="mx-5">
+        <h1 appHighlight>أنت الرابح دوماً مع خدمات حجز الطيران من ترافيل السياحية!</h1>
+        <p>احجز تذاكر طيران رحلاتك مع شركة ترافيل السياحية، واستفد من باقات عروضنا المتنوعة، وأسعارنا الخاصة والتفضيلية، التي لن تستطيع تحصيلها عند الحجز المباشر، نظراً لارتباطاتنا بأهم شركات الطيران المحلية والعالمية...</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,218 @@
+#booking-one{
+  margin-top:76px;padding:15px 0px;background:#fb8d04;
+  .row{
+    div{
+      .bi-house-door-fill{font-size:25px;}
+      .bi-chevron-left{font-size:20px;}
+      .bi-house-door-fill{color:#fff;}
+      .bi-chevron-left{margin: 0px 10px;color:#9d1d96;}
+      b{font-size:24px;color:#fff;}
+    }
+  }
+}
+
+#booking-three{
+  .row:first-child{
+    .col-md-3{
+      label{margin: 0 0rem;font-size:22px;color:#333;}
+      input[type='radio']{
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+      }
+      input[type='radio']:checked:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border:3px solid #e0e0e0;
+      }
+    }
+  }
+
+  .row:nth-child(2){
+    z-index: 1 !important;
+    .col-sm-12,.col-sm-6{margin: 15px 0px !important;}
+    div:first-child{
+      div[id="inputOne"]{
+        border:2px solid #eee;box-shadow: 0 0 6px rgba(0,0,0,0.29);
+        border-radius:6px;
+        input{
+          width:100%;height:100%;border:none;font-size:19px;
+          ::placeholder{font-size:18px;}
+        }
+        input:focus{outline:none;}
+      }
+    }
+
+    div:nth-child(2){
+      div[id="inputTwo"]{
+        background: #faf8f8;
+        border:0px solid #eee;box-shadow: 0 0 6px rgba(0,0,0,0.29);
+        border-radius:6px;
+        input{
+          width:100%;height:100%;border:none;background: #faf8f8 !important;
+          font-size:19px;
+          ::placeholder{font-size:18px;}
+        }
+        input:focus{outline:none;}
+        .col-3 *{display:inline-block;height:100%;}
+        .col-3{
+          .col-4{
+            span{font-size:20px;margin:0xp 4px;}
+            i{color:#fb8d04;}
+          }
+        }
+        .col-3:hover{cursor:pointer;}
+      }
+      .fa-caret-down{color:#fb8d04;font-size:18px;}
+      ul.codes{
+        margin-bottom:0px !important;padding-left:0px !important;
+        li{
+          background:#faf8f8 !important;padding:10px 0px;display:flex;list-style-type:none;
+          font-weight:bold;
+        }
+        li:hover{background:#fb8d04!important;color:#fff;cursor:pointer;}
+      }
+    }
+
+    div:nth-child(3){
+      div[id="inputThree"]{
+        border:0px solid #eee;box-shadow: 0 0 6px rgba(0,0,0,0.29);
+        border-radius:6px;
+        input{
+          height:100%;border:none;font-size:19px;
+          ::placeholder{padding:0px 5px !important;}
+        }
+        input:focus{outline:none;}
+        .fa-user,.fa-caret-down{color:#fb8d04;font-size:24px;}
+      }
+      ul{
+        z-index: 2 !important;box-shadow:0 0 6px rgba(0,0,0,0.29);
+        li{
+          .col-6:nth-child(1){font-size:20px;}
+          .col-6:nth-child(2){
+            .row{
+              .col-4:nth-child(2){font-size: 20px;font-weight:bold;}
+              .col-4:nth-child(1),.col-4:nth-child(3){background:#333 !important;justify-content:center;align-items:center;display:flex;}
+            }
+          }
+        }
+      }
+    }
+
+    div:nth-child(4){
+      z-index: 1 !important;
+      div[id="inputFour"]{
+        border:2px solid #eee;box-shadow: 0 0 6px rgba(0,0,0,0.29);
+        border-radius:6px;position:relative;
+        select{
+          width:100%;height:100%;border:none;font-size:19px; padding: 0rem 1rem !important;
+          ::placeholder{font-size:18px;}
+        }
+        select:focus{outline:none;}
+        #arrow{
+          height:100%;position:absolute;left:10px;width:20px;top:25%;
+          .fa-caret-down{font-size:30px;}
+        }
+        option{
+          font-size: 20px;
+        }
+      }
+    }
+
+    div:nth-child(5), div:nth-child(6){
+      z-index: 1 !important;
+      div[id="inputFive"],div[id="inputSix"]{
+        border:2px solid #eee;box-shadow: 0 0 6px rgba(0,0,0,0.29);
+        border-radius:6px;
+        input{
+         border:none;font-size:19px;
+          ::placeholder{font-size:18px;}
+        }
+        .fa-caret-down,.fa-map-marker{color:#fb8d04;font-size:24px;}
+        input:focus{outline:none;}
+      }
+      ul{
+        box-shadow: 0 0 6px rgba(0,0,0,0.29);
+        li{
+          font-weight:bold;width:100%;
+          .fa-fighter-jet{color:#fb8d04;font-size:26px;}
+          b{font-size:20px;}
+        }
+        li:hover{background:#EEEEEE;}
+      }
+    }
+    input[type="submit"]{background: #fb8d04;color:#fff;}
+  }
+}
+
+#sitable_price{
+  .row{
+    div:first-child{
+      h2{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #9d1d96;
+        font-weight: 700;}
+      }
+      p{font-size:20px;line-height:30px;}
+  }
+}
+
+#bestCompanies{
+  .row{
+    div{
+      h1{
+        text-align: center !important;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #9d1d96;
+        font-weight: 700;
+        line-height:40px !important;
+      }
+    }
+  }
+}
+
+
+#round{
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  padding: 100px 0px;
+}
+
+.container#whyChooseSafarq{
+  >div{
+    >h1{
+      text-align: center !important;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #9d1d96;
+      font-weight: 700;
+      line-height:40px !important;
+    }
+  }
+  .row{
+    .col-sm-12:first-child{
+      div{
+        margin: 20% 0px;
+        p{font-size:1.5rem;line-height:35px;color: #333;}
+      }
+    }
+  }
+}
+
+.container#youEarn{
+  .row{
+    .col-sm-12:nth-child(2){
+      div{
+        margin: 20% 0px;
+        p{font-size:1.5rem;line-height:35px;color: #333;}
+      }
+    }
+  }
+}

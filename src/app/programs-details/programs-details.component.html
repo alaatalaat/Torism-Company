@@ -1,0 +1,32 @@
+<div class="container-fluid" id="program-detaiols-one">
+  <div class="container">
+    <div class="row">
+      <div>
+          <a routerLink="/home"><i class="bi bi-house-door-fill"></i></a>
+          <i class="bi bi-chevron-left"></i>
+          <b>
+            البرامج السياحية <i class="bi bi-chevron-left"></i>
+            تركيا<i class="bi bi-chevron-left"></i>
+            {{allProgDetails.viewValue}}<i class="bi bi-chevron-left"></i>
+            أفضل البرامج السياحيه في {{allProgDetails.viewValue}} {{thisYear|date:'yyyy'}}
+          </b>
+          <img src="../../assets/back-arrow.png" (click)="goBackToPrograms()">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5" id="program-detaiols-two">
+  <div class="row">
+    <h1 class="col-sm-12 col-md-8">أفضل البرامج السياحية في {{allProgDetails.viewValue}} {{thisYear|date:'yyyy'}}</h1>
+    <div class="col-sm-12 col-md-4">
+      <div class="row">
+        <button (click)="gotoSubProg()" class="col btn mx-1 text-center">البرامج السياحية</button>
+        <button (click)="overview()" class="col btn mx-1 text-center">نظرة عامة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

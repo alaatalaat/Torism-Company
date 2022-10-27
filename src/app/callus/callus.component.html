@@ -1,0 +1,54 @@
+<div class="container-fluid" id="callus-one">
+  <div class="container">
+    <div class="row">
+      <div>
+          <a routerLink="/home"><i class="bi bi-house-door-fill"></i></a>
+          <i class="bi bi-chevron-left"></i>
+          <b>اتصل بنا</b>
+      </div>
+  </div>
+  </div>
+</div>
+<div class="container-fluid callusHeader"></div>
+
+<!-- Start callus form -->
+<div class="container" id="callus-two">
+  <div class="text-center">
+    <h1 class="text-center">تواصل معنا</h1>
+    <span></span>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-5">
+      <h1>اترك لنا رسالة</h1>
+      <form  [formGroup]="contactForm" (ngSubmit)="send()">
+        <div>
+          <input type="text" name="clientName" placeholder="الاسم" formControlName="name">
+          <span class="text-danger" *ngIf='name.invalid && name.touched || name.invalid && name.dirty'>يرجي ادخال الاسم</span>
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="البريد  لاالكتروني" formControlName="email">
+          <span class="text-danger" *ngIf="email.invalid && email.touched && email.dirty">
+            <span *ngIf="email.errors['pattern']">يجب ان ينتهي البريد الالكتروني ب .com</span>
+          </span>
+        </div>
+        <div id="tel-div">
+          <input type="tel" name="phone" placeholder="رقم الهاتف" formControlName="phone">
+          <span class="text-danger" *ngIf="phone.invalid && phone.touched || phone.invalid && phone.dirty">يرجي ادخال رقم موبايل مكون من 11 رقم</span>
+        </div>
+        <div>
+          <textarea name="message" id="" cols="30" rows="8" placeholder="رسالتك" formControlName="message"></textarea>
+          <span class="text-danger" *ngIf="message.invalid && message.touched ||message.invalid &&  message.dirty">ادخل رسالتك</span>
+        </div>
+        <input type="submit" value="ارسل الطلب" [disabled]="contactForm.invalid">
+      </form>
+
+    </div>
+    <div class="col-sm-12 col-md-2">
+      <p>أو</p>
+    </div>
+    <div class="col-sm-12 col-md-5"></div>
+  </div>
+</div>
+<!-- End callus form -->
+
+<button (click)="putData()" class="btn btn-info">Put</button>

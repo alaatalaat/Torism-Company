@@ -1,0 +1,56 @@
+#callus-one{
+  margin-top:76px;padding:15px 0px;background:#fb8d04;
+  .row{
+    div{
+      .bi-house-door-fill{font-size:25px;}
+      .bi-chevron-left{font-size:20px;}
+      .bi-house-door-fill,.bi-chevron-left{color:#fff;}
+      .bi-chevron-left{margin: 0px 10px;color:#9d1d96;}
+      b{font-size:24px;color:#fff;}
+    }
+  }
+}
+.callusHeader{
+  background-image:url('../../assets/contact-us-header.jpg');background-size:cover;
+  height:400px;
+}
+
+
+#callus-two{
+  margin-top:-100px;
+  >div:first-child{
+    h1{margin:0px;color:#fff;}
+    >span{
+      height:2px !important;width:3%;background:#fb8d04;display:block;margin:auto;
+    }
+  }
+  .row{
+    @media only screen and(max-width:400px){
+      *div{
+        width:100% !important;
+      }
+    }
+    background: #fb8d04;color:#fff;margin-top:20px;padding:30px 20px;
+    *div{
+      width:90%;
+      input{height:40px;padding:0px 10px 0px 0px;}
+      input,textarea{
+        width:100%;outline:none;margin:15px 0px 5px 0px;background:transparent;
+        border:1px solid #fff;box-shadow:none;
+      }
+      textarea{padding:10px 10px 0px 0px;}
+      input::placeholder,textarea::placeholder,input:focus{color:#fff !important;}
+      span{font-weight:600;}
+    }
+    >div:nth-child(2){
+      justify-content:center;align-items:center;display:flex;
+      p{width:30px;height:30px;border-radius:50%;color:#fb8d04;background:#fff;
+        justify-content:center;align-items:center;display:flex;}
+    }
+    input[type="submit"]{
+      width:30%;padding:10px;background:transparent;border:1px solid #fff;color:#fff;
+      outline: none;font-size:18px;text-align:center;margin-top: 10px;
+    }
+
+  }
+}

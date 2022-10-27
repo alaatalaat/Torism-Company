@@ -1,0 +1,92 @@
+<div class="container-fluid" id="bookedHotelOne">
+  <div class="container">
+    <div class="row">
+      <div>
+          <a routerLink="/home"><i class="bi bi-house-door-fill"></i></a>
+          <i class="bi bi-chevron-left"></i>
+          <b>حجز فنادق</b>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="bookedHotelTwo">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 mt-md-0 mt-3">
+      <div class="card mx-md-5 text-center my-md-5 py-4">
+        <h1 class="text-center">نحن نساعدك لأختيار الفندق الأفضل</h1>
+        <span class="mx-auto">احجز الأن</span>
+        <div class="card mx-1 mx-md-5  py-4 my-3">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 mt-1 text-center">
+              <span class="btn-light btn d-block mx-4 text-center active-btn" (click)="activeBtn1()">ابحث عن غرفة</span>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 mt-1 text-center">
+              <span class="btn-light btn d-block mx-4 text-center" (click)="activeBtn2()">اتصل</span>
+            </div>
+          </div>
+          <div id="searchRoom">
+            <form class="mx-3 my-4" #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
+              <div>
+                <p>الدولة</p>
+                <input type="text" class="form-control" name="state" ngModel #state="ngModel" required>
+                <span *ngIf="state.invalid && state.touched && state.dirty" class="text-danger">ادخل اسم دولتك</span>
+              </div>
+              <div>
+                <p>المدينة</p>
+                <input type="tel" class="form-control" name="city" ngModel #city="ngModel">
+                <span *ngIf="city.invalid && city.touched && city.dirty">ادخل اسم مدينتك</span>
+              </div>
+              <div>
+                <p>المنطقة</p>
+                <input type="email" class="form-control" name="region" ngModel #region="ngModel">
+                <span *ngIf="region.invalid && region.touched && region.dirty">ادخل اسم منطقتك</span>
+              </div>
+              <input type="submit" class="form-control mt-3 text-center" value="ابحث">
+            </form>
+          </div>
+          <div id="call">
+            <form class="mx-3 my-4" [formGroup]="call" (ngSubmit)="submit()">
+              <div>
+                <p>الاسم : </p>
+                <input type="text" class="form-control" formControlName="clientName">
+                <span *ngIf="clientName.invalid && clientName.touched && clientName.dirty">
+                  <span class="text-danger" *ngIf="clientName.errors['required']">حقل الزامي</span>
+                  <span class="text-danger" *ngIf="clientName.errors['invalidName']">من فضلك ادخل  حروف وليست ارقام</span>
+                </span>
+              </div>
+              <div>
+                <p>رقم الجوال : </p>
+                <input type="tel" class="form-control" formControlName="clientTel">
+              </div>
+              <div>
+                <p>البريد الالكتروني : </p>
+                <input type="email" class="form-control" formControlName="clientMail">
+              </div>
+              <input type="submit" class="form-control mt-3 text-center" value="أرسل الطلب">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 px-0 mt-md-0 mt-3">
+      <img src="../../assets/hotels-video.jpg" width="100%" alt="">
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid mt-5 pt-5" id="bookHotelThree">
+  <div class="row">
+    <div class="col-sm-12 col-md-2">
+      <ul>
+        <li class="text-center" routerLinkActive="active"><a routerLink="famous-hotels">أشهر الفنادق</a></li>
+        <li class="text-center" routerLinkActive="active"><a routerLink="famous-places">أشهر الاماكن</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-10 px-0">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

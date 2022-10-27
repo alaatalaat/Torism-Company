@@ -1,0 +1,56 @@
+#bookedHotelOne{
+  margin-top:76px;padding:15px 0px;background:#fb8d04;
+  .row{
+    div{
+      .bi-house-door-fill{font-size:25px;}
+      .bi-chevron-left{font-size:20px;}
+      .bi-house-door-fill,.bi-chevron-left{color:#fff;}
+      .bi-chevron-left{margin: 0px 10px;color:#9d1d96;}
+      b{font-size:24px;color:#fff;}
+    }
+  }
+}
+
+#bookedHotelTwo{
+  .row{
+    div:first-of-type{
+      .card{
+        h1{color:#9d1d96;font-size:30px;font-weight:bold;}
+        >span{font-size:1.4rem;}
+        .btn{color: #fb8d04;}
+        .active-btn{background:#9d1d96;color:#fff;}
+        #call{display:none;}
+        #call,#searchRoom{
+          div{
+            margin-top:10px;
+            p{margin-bottom:5px;}
+          }
+          input{outline:none;box-shadow:none;}
+          input[type="submit"]{background-color:#fb8d04;color:#fff;}
+          span{font-size:16px;}
+        }
+        @media screen and(max-width:400px) {
+          .card{border:none !important;}
+        }
+      }
+    }
+    div:nth-child(2){
+      img{transform:rotateY(-180deg);}
+    }
+  }
+}
+
+#bookHotelThree{
+  ul{
+    padding-left:0px;
+    li{
+      a{text-decoration:none;color:#fff;margin:auto;}
+      list-style-type:none;font-size:18px;background: #9d1d96;
+      padding: 10px 0px;margin-bottom:10px;border-radius:3px !important;
+    }
+    .active{
+      border:2px solid #fb8d04;background:#fff;
+      a{color:#9d1d96;font-weight: 600;}
+    }
+  }
+}

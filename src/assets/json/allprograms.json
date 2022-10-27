@@ -1,0 +1,10 @@
+[
+    {"id":"antalya","value":"antalya","viewValue": "انطاليا"},
+    {"id":"bursa","value":"bursa","viewValue": "بورصة"},
+    {"id":"istanbul","value":"istanbul","viewValue": "اسطنبول"},
+    {"id":"mugla","value":"mugla", "viewValue": "موغلا"},
+    {"id":"nevsehir","value":"nevsehir","viewValue": "نوشهر"},
+    {"id":"sakarya","value":"sakarya","viewValue": "سكاريا"},
+    {"id":"trabzon","value":"trabzon","viewValue": "طرابزون"},
+    {"id":"yalova","value":"yalova","viewValue": "يلوا"}
+]

@@ -1,0 +1,42 @@
+#carWithDriverOne{
+  margin-top:76px;padding:15px 0px;background:#fb8d04;
+  .row{
+    div{
+      .bi-house-door-fill{font-size:25px;}
+      .bi-chevron-left{font-size:20px;}
+      .bi-house-door-fill{color:#fff;}
+      .bi-chevron-left{margin: 0px 10px;color:#9d1d96;}
+      b{font-size:24px;color:#fff;}
+    }
+  }
+}
+
+#carWithDriverTwo{
+  h1{color:#9d1d96;font-weight:600;}
+  p{font-size:18px;}
+  .row:first-of-type{
+    div:first-child{
+      ul li{
+        list-style-type:none;
+        padding: 5px 15px;margin-top: 15px;margin-bottom:15px;border-radius:5px;
+        h1{cursor:pointer;color:#9d1d96;}
+      }
+    }
+  }
+  @media screen and(max-width:400px) {
+    svg{width:40px;height:40px;}
+    ul li h1{font-size:15px;}
+    ul{padding-left:0px}
+    li{padding:5px !important;}
+    #carWithDriverTwo h1{font-size: 12px !important;}
+  }
+
+}
+.box-shadow{
+  box-shadow: 0 0 6px rgb(0 0 0 / 40%);
+
+}
+#whyMustChooseTravel{
+  h1{color:#9d1d96;font-weight:600;}
+  .row >h1{border-right:5px solid #fb8d04;}
+}

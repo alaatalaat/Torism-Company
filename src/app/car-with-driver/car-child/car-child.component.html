@@ -1,0 +1,29 @@
+<div class="container" id="carWithDriverOne">
+  <img [src]="imgOnTop" width="100%">
+
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-7 mt-3">
+      <h1>أسئلة حول تأجير السيارات :</h1>
+      <div class="accordion mt-2" id="accordionExample">
+        <div class="accordion-item mt-3" style="height:max-content" *ngFor="let acc of accorFromParent">
+          <h2 class="accordion-header m-0" [id]="acc.head">
+            <button class="accordion-button"  type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+acc.id" aria-expanded="true" aria-controls="collapseOne">
+              {{acc.btnText}}
+            </button>
+          </h2>
+          <div [id]="acc.id" class="accordion-collapse collapse" [attr.aria-labelledby]="acc.head" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="m-0">{{acc.bodyText}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 d-none d-md-block text-center">
+      <img src="../../../assets/car-with-driver/car-faq-image.svg" width="80%">
+    </div>
+  </div>
+</div>
+
+
+

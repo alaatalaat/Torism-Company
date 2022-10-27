@@ -1,0 +1,83 @@
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let card of cards">
+    <div class="mx-1">
+      <div class="card pb-4">
+        <div class="card-head">
+          <div [id]="card.id"  class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" >
+              <div class="carousel-item" *ngFor="let Img of card.carouselImg">
+                <img [src]="Img" height="300px" class="w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#'+card.id" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#'+card.id" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="justify-content-between">
+          <div id="first">
+            <img src="../../assets/famousHotels/free.svg"  width="35px" height="50px">
+            <img src="../../assets/famousHotels/coffee.svg" width="35px" height="50px">
+          </div>
+          <div>
+            <div id="second">
+              <b><span>{{card.rate}}</span>.0</b>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="h4 mx-3">{{card.description}}</p>
+        <div class="mx-3">
+          <img class="mb-3" src="../../assets/famousHotels/map.svg">
+          <span>{{card.city}}</span>
+        </div>
+        <button class="btn text-center mx-3 my-1 py-2" (click)="openDetails(card.city,card.description,card.map,card.rate, card.carouselImg[0], card.carouselImg[1],card.carouselImg[2],card.carouselImg[3],card.carouselImg[4])">احجز غرفة</button>
+        <button class="btn text-center mx-3 my-1 py-2" [routerLink]="['/hotel',card.id]">المزيد من التفاصيل</button>
+      </div>
+    </div>
+  </ng-template>
+
+</owl-carousel-o>
+
+
+<div class="d-none" id="container" (click)="close()">
+  <div id="popup-content" class="bg-light">
+    <div class="header py-3">
+      <i class="bi bi-arrow-right mx-2" (click)="close()"></i>
+      <b class="">الخلف</b>
+    </div>
+    <div class="container">
+      <div class="row mx-4 my-5">
+        <h1 id="description" class="h1"></h1>
+       <div class="row">
+          <div class="col">
+            <img class="mb-3" src="../../assets/famousHotels/map.svg">
+            <span id="title"></span>
+            <a href="" target="_blank" id="map"> الموقع علي الخريطة </a>
+          </div>
+          <div class="col" >
+            <span id="rate"></span>
+            <span id="rateNum"></span>
+          </div>
+          <div class="mt-4">
+            <div class="card">
+              <img id="bigImg" class="card" height="400px" [src]="" alt="">
+            </div>
+            <div class="row mt-2">
+              <div class="col"><img class="gallery" src=""></div>
+              <div class="col"><img class="gallery" src=""></div>
+              <div class="col"><img class="gallery" src=""></div>
+              <div class="col"><img class="gallery" src=""></div>
+              <div class="col"><img class="gallery" src=""></div>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>

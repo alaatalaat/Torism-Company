@@ -1,0 +1,37 @@
+#carWithDriverOne{
+  margin-top:130px;
+}
+#carWithDriverOne h1{font-weight:bold;color:#9d1d96;}
+.accordion-button:not(.collapsed)::after,.accordion-button::after {
+  position: absolute;
+  left: 10px;
+}
+.accordion-button{box-shadow:none;}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url('../../../assets/patch-question.svg');
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transform: rotate(0deg);
+}
+.accordion-button{
+  font-size:18px;font-weight:bold;
+  border:1px solid #9d1d96;
+}
+.accordion-button:not(.collapsed){
+  color:#9d1d96;background-color: #e9e3e8;
+}
+.accordion-collapse{border:1px solid #9d1d96;border-top:none;}
+.accordion-body p{font-size:18px;line-height:30px}
+
+
+@media screen and(max-width:400px){
+  .accordion-button{
+    font-size:15px;font-weight:bold;
+  }
+  .accordion-body p{font-size:15px;line-height:30px}
+}
