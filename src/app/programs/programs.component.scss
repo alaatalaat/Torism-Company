@@ -1,5 +1,5 @@
 #program-one{
-  margin-top:76px;padding:15px 0px;background:#fb8d04;
+  margin-top:76px;padding:15px 0px;background:#fb8d04;width:100%;
   .row{
     div{
       .bi-house-door-fill{font-size:25px;}
@@ -26,7 +26,39 @@
             box-shadow:none;outline:none;background:#fb8d04;
             color:#fff;}
         }
+        #callusContent{
+          #call{
+            div{
+              margin-top:10px;
+              p{margin-bottom:5px;}
+            }
+            input{outline:none;box-shadow:none;}
+            input[type="submit"]{background-color:#fb8d04;color:#fff;}
+            span{font-size:16px;}
+          }
+        }
       }
+    }
+
+    .col-md-8{
+      >div:first-child,div:nth-child(3){
+        display:flex;flex-direction:row-reverse;width:100%;
+        img{transform:rotateY(180deg);height:300px;}
+        span{
+          color:#fb8d04;border:1px solid #000;height:fit-content;padding:10px;
+          margin-left:-80px;margin-top:100px;z-index:100;background:#fff;
+        }
+      }
+      div:nth-child(2){
+        width:100%;display:flex;flex-direction:row;
+        span{
+          color:#fb8d04;border:1px solid #000;height:fit-content;padding:10px;
+          margin-right:-80px;margin-top:100px;z-index:100 !important;background:#fff;
+        }
+      }
+    }
+    @media screen and(max-width:400px) {
+      img{width: 60% !important;}
     }
   }
 }

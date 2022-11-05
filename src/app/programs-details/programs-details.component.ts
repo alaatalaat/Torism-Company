@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { SubProgComponent } from '../sub-prog/sub-prog.component';
+import { NgModule }      from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-programs-details',
@@ -10,6 +12,7 @@ import { SubProgComponent } from '../sub-prog/sub-prog.component';
   styleUrls: ['./programs-details.component.scss'],
 })
 export class ProgramsDetailsComponent implements OnInit {
+  name:string = ''
   thisYear = new Date();
   allProgDetails:any=[];
   progValue:any;

@@ -29,56 +29,56 @@ export class HomeComponent implements OnInit {
 
   sayAbouSafaraq = [
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/416e0337157c2a90f799eca79ec4d9aa13.jpg',
+      imgSrc:'../../assets/home/say1.avif',
       name:'علي بشير ',
       saidText:'أقدم جزيل الشكر لكل العاملين في هذه الشركة، وأنصح كل السائحين الراغبين بقضاء أجمل الرحلات والأوقات السعيدة والممتعة بالتعامل مع شركة ترافيل السياحية.',
       btnID:'aliBshir',
       src:'https://www.youtube.com/embed/YIPBOTapNy4'
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/c0d608c4598fed40736a6365ff77b7a58.png',
+      imgSrc:'../../assets/home/say2.avif',
       name:'أحد عملاء شركة ترافيل',
       saidText:'أشكر.. أشكر شركة ترافيل لجهودها المبذولة والأكثر من رائعة',
       btnID:'oneClient',
       src:'https://www.youtube.com/embed/t8XcsL6kVKA'
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/254a28a16017fcc3e84e53ad9bd5715c15.jpg',
+      imgSrc:'../../assets/home/say3.avif',
       name:'أ.طارق',
       saidText:'شركة ترافيل كأنهم أسرة واحدة.. حرصوا على رفاهيتنا والاهتمام بنا للغاية',
       btnID:'tarek',
       src:'https://www.youtube.com/embed/WUJ0pRu8N9Y'
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/3e4ef4574cad8121d8168d2bdd0df69611.jpg',
+      imgSrc:'../../assets/home/say8.avif',
       name:'ضيف الله بن علي',
       saidText:'أنصح كل الراغبين بالسياحة في إسطنبول للتمتع بأروع الأماكن الطبيعية، التي تندرج في البرامج السياحية التي تنظمها شركة ترافيل السياحية.',
       btnID:'deif',
       src:'https://www.youtube.com/embed/BBR81tqe3zw',
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/3ac71dedde9d9ccf3edcc9fbf541be2414.jpg',
+      imgSrc:'../../assets/home/say7.avif',
       name:'الشيخ مختار عربي مؤمن',
       saidText:'السياحة الهادفة إلى تركيا تريح النفس، وتبعث الأمل في الإنسان، فالسياحة في اسطنبول لها مذاقها الخاص، وأنت تعيش مع عبق التاريخ وعمق الحضارة وأمل المستقبل.',
       btnID:'shikhMokhtar',
       src:'https://www.youtube.com/embed/Vn65IqTf5F4'
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/8f90b4f3c514c62160d458b5c457087f11.jpg',
+      imgSrc:'../../assets/home/say6.avif',
       name:'عامر الشحي',
       saidText:'ننصح كل من يرغب بالقيام برحلات سياحية، بالتواصل مع شركة ترافيل السياحية، التي تتسم بسرعة الاستجابة والبرامج السياحية المميزة.',
       btnID:'amer',
       src:'https://www.youtube.com/embed/55awcuTL5_E'
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/3aa0008974102af4483a159452f50b105.png',
+      imgSrc:'../../assets/home/say5.avif',
       name:'أ.سامح ابراهيم',
       saidText:'أشهد لترافيل السياحية أنهم كانوا محترمين جداً، وبذلوا مجهوداً خرافياً لتلبية طلباتنا',
       btnID:'sameh',
       src:'https://www.youtube.com/embed/ZDs4YMOwxCA'
     },
     {
-      imgSrc:'https://assets.safaraq.com/images/160/testimonials/bbafa812e6ad1ffbe5096000684bae2a5.png',
+      imgSrc:'../../assets/home/say4.avif',
       name:'المهندس - تامر سراج ',
       saidText:'نتمنى أن نأتي معكم في رحلة ثانية',
       btnID:'tamer',

@@ -12,7 +12,7 @@
 
 <div class="container mt-5" id="program-two">
   <div class="row">
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-4 mt-4">
       <div class="card py-3">
         <h1 class="mx-2">استمتع بأروع البرامج السياحية مع ترافيل</h1>
         <span class="mx-2">اختر برنامجك المفضّلً</span>
@@ -47,8 +47,40 @@
             <input type="submit" value="ابحث" class="btn w-100 mt-3 text-center">
           </form>
         </div>
-        <div id="callusContent" #callusContent>Call us</div>
+        <div id="callusContent" #callusContent>
+          <form class="mx-3 my-4" id="call">
+            <div>
+              <p>الاسم : </p>
+              <input type="text" class="form-control" formControlName="clientName">
+            </div>
+            <div>
+              <p>رقم الجوال : </p>
+              <input type="tel" class="form-control" formControlName="clientTel">
+            </div>
+            <div>
+              <p>البريد الالكتروني : </p>
+              <input type="email" class="form-control" formControlName="clientMail">
+            </div>
+            <input type="submit" class="form-control mt-3 text-center" value="أرسل الطلب">
+          </form>
+        </div>
       </div>
     </div>
+
+    <div class="col-sm-12 col-md-8 mt-4">
+      <div>
+        <img src="../../assets/program-header-1.jpg" width="40%">
+        <span class="rounded">دعنا نتشارك بالتخطيط لأدق تفاصيل رحلتك</span>
+      </div>
+      <div>
+        <img src="../../assets/program-header-2.jpg" width="40%">
+        <span class="rounded">لقضاء أسعد لحظات العمر في أجمل المناطق</span>
+      </div>
+      <div>
+        <img src="../../assets/program-header-3.jpg" width="40%">
+        <span class="rounded">تجربة سياحية فريدة لن تنساها على مر الأيام</span>
+      </div>
+    </div>
+
   </div>
 </div>
